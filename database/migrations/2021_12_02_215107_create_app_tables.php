@@ -98,6 +98,6 @@ class CreateAppTables extends Migration
         Schema::dropIfExists('sauveteurs_sauves');
         Schema::dropIfExists('sauveteurs_sauvetages');
         Schema::dropIfExists('type_bateaux');
-        Schema::dropIfExists('decorations');
+        Schema::dropIfExists('decorations');  
     }
 }
