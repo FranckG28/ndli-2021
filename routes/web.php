@@ -14,7 +14,43 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('app');
+    return view('home');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/boat', function () {
+    return view('boat');
+});
+
+Route::get('/boatList', function () {
+    return view('boatList');
+});
+
+Route::get('/resquer', function () {
+    return view('resquer');
+});
+
+Route::get('/resquerList', function () {
+    return view('resquerList');
+});
+
+Route::get('/saved', function () {
+    return view('saved');
+});
+
+Route::get('/savedList', function () {
+    return view('savedList');
+});
+
+Route::get('/trips', function () {
+    return view('trips');
+});
+
+Route::get('/tripsList', function () {
+    return view('tripsList');
 });
 
 Route::get('addrescuer', function () {
