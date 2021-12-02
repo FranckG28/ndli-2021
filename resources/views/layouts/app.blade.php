@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>@yield('title')</title>
-    <link rel="stylesheet" type="text/css" >
-    <link rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
 
+  @include('shared.nav-bar')
   @yield('content')
-
+  @include('shared.footer')
 </html>
