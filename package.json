@@ -1,5 +1,6 @@
 {
   "name": "ndli",
+  "homepage": "https://ndli.depret.net",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
