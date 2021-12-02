@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+<<<<<<< HEAD
 
 Route::get('/home', function () {
     return view('home');
@@ -52,3 +53,5 @@ Route::get('/trips', function () {
 Route::get('/tripsList', function () {
     return view('tripsList');
 });
+=======
+>>>>>>> b4c2077cbda014966290c609f2b6d1de30551537

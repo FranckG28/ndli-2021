@@ -1,25 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "sauveteurs-du-dunkerquois",
-  "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npx tailwindcss -i src/css/style.css -o src/css/tailwind.css --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@git.unistra.fr:ratiscrum/ndli.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
-  }
-=======
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -38,5 +17,4 @@
         "postcss": "^8.4.4",
         "tailwindcss": "^2.2.19"
     }
->>>>>>> 058a5e6d7c4749d4b1abe4387d2242d6913d7b3b
 }
