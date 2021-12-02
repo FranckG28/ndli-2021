@@ -22,8 +22,7 @@ class CreateAppTables extends Migration
         {
             $table->id();
             $table->date('date');
-            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
-            $table->string('url_image',256);
+            $table->string('url_image',256);  
         });
 
         Schema::create('type_bateaux',function(Blueprint $table)
