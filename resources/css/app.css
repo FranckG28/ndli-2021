@@ -2,6 +2,176 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* FONTS */
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Medium.woff2') format('woff2'),
+        url('/fonts/Roobert-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Regular.woff2') format('woff2'),
+        url('/fonts/Roobert-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Light.woff2') format('woff2'),
+        url('/fonts/Roobert-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Heavy.woff2') format('woff2'),
+        url('/fonts/Roobert-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Bold.woff2') format('woff2'),
+        url('/fonts/Roobert-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-SemiBold.woff2') format('woff2'),
+        url('/fonts/Roobert-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-MediumItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro Poster';
+    src: url('/fonts/Vesterbro-Poster.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Poster.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro Poster';
+    src: url('/fonts/Vesterbro-PosterItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-PosterItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Italic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-ExtraboldItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-ExtraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Light.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Bold.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Extrabold.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-LightItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Regular.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Medium.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 body {
-    @apply bg-black
+    @apply bg-gray-50
+}
+
+h1 {
+    @apply font-serif	
 }
