@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('addrescuer', function () {
+    return view('rescuer'); // une partie communautaire permettant à toutes personnes ayant connaissance de sauvetages, de sauveteurs ou même de personnes sauvées
+});
