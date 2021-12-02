@@ -64,7 +64,7 @@ class CreateAppTables extends Migration
             $table->date('date_mort');
             $table->timestamps();
 
-            $table->foreignId('id_grade')->constrained('grade');
+            $table->foreignId('id_grade')->constrained('grades');
         });
 
         
