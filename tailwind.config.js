@@ -1,13 +1,20 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   mode: 'jit',
   purge: [
-    './src/**/*.html',
-    './src/**/*.js',
-    './src/**/*.php',
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Roobert', ...defaultTheme.fontFamily.sans],
+        serif: ['Vesterbro', ...defaultTheme.fontFamily.serif]
+      },
+    },
   },
   variants: {
     extend: {},
