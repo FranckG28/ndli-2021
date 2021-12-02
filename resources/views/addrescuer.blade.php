@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>TP6 - @yield('title')</title>
+        <title>Rescuer</title>
         <link rel="stylesheet" href="../../css/styles.css">
         <link rel="stylesheet" href="../../css/bootstrap.min.css">
     </head>
@@ -15,11 +15,13 @@
             <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input type="date" name="dateBirth" id="dateBirth" placeholder="Date de naissance" required>
             <input type="date" name="dateDeath" id="dateDeath" placeholder="Date de décès (facultatif)">
-            <select name="Grade" id="grade-select">
-                <option value="">--Please choose an option--</option>
-                <option value="dog">Grade1</option>
-                <option value="dog">Grade2</option>
+            <select name="Grade" id="grade">
+                <option value="grade1">Commandant</option>
+                <option value="garde2">Grade2</option>
             </select>
+            <textarea placeholder="Etat civil" id="etatcivil" name="etatcivil"></textarea>
+            <textarea placeholder="Carrière" id="carriere" name="carriere"></textarea>
+            <textarea placeholder="Généalogie" id="genealogie" name="genealogie"></textarea>
         </form>
     </body>
 </html>
