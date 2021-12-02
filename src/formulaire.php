@@ -8,12 +8,12 @@
 </head>
 <body>
     <form action="" method="POST">
-    
-        <label for="name">Enter your name: </label>
         <input type="text" name="name" id="name" placeholder="Nom" required>
+        <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
+        <input type="date" name="dateBirth" id="dateBirth" placeholder="Date de naissance" required>
+        <input type="date" name="dateDeath" id="dateDeath" placeholder="Date de décès (facultatif)">
 
-        <label for="email">Enter your email: </label>
-        <input type="email" name="email" id="email" required>
+        
 
         <input type="submit" value="Subscribe!">
     </form>
