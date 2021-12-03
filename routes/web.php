@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -82,3 +83,9 @@ Route::get('/community/saved', function () {
 Route::get('/community/trips', function () {
     return view('community.trips');
 })->name('community.trips');
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::post('/authenticate', [LoginController::class, 'authenticate']);
