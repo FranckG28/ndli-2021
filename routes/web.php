@@ -78,7 +78,6 @@ Route::get('/community/resquer', function () {
 
 Route::post('add_rescue', [AddRescuerController::class, 'add_rescue'])->name('add_rescue');
 
-
 Route::get('/community/trips', function () {
     return view('community.trips');
 })->name('community.trips');
