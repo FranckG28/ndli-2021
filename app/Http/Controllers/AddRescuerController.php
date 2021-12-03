@@ -19,6 +19,6 @@ class AddRescuerController extends Controller
         $rescue->carriere = $request->input('carriere');
         $rescue->etat_civil = $request->input('etatcivil');
         $rescue->save();
-        return view('/community/saved');
+        return redirect()->route('resquerList');
     }
 }

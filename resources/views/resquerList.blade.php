@@ -11,7 +11,7 @@
 
 
                 <a href="{{$sauveteur->id}}" class="rounded-lg bg-white p-4 shadow-md flex gap-3 hover:bg-gray-50 transition ease-in-out duration-200 active:bg-gray-100">
-                    <img class="ml-40 rounded-full w-16 shadow-2xl" src="{{$sauveteur->urlImg}}" alt="sauveur image">
+                    <img class="ml-40 rounded-full w-16 shadow-2xl" src="{{$sauveteur->urlImg}}" alt="image non disponible">
                     <div>
                         <h2>{{$sauveteur->prenom}} {{$sauveteur->nom}}</h2>
                         <p class="text-gray-400 my-1">{{$sauveteur->date_naissaince}} / {{$sauveteur->date_mort}}</p>

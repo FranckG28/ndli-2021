@@ -166,6 +166,14 @@
     font-display: swap;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    margin-top: auto;
+}
 
 
 body {
@@ -187,7 +195,7 @@ input[type=text] {
 }
 
 h2 {
-    @apply text-2xl text-yellow-500 
+    @apply text-2xl text-yellow-500
 }
 
 .resquer{
