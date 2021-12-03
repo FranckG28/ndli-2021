@@ -21,7 +21,7 @@ class Sauveteur extends Model
 
     public function sauvetages(): BelongsToMany
     {
-        return $this->belongsToMany(Sauvetages::class, 'sauveteurs_sauvetages', 'id_sauveteurs', 'id_sauvetages');
+        return $this->belongsToMany(Sauvetage::class, 'sauveteurs_sauvetages', 'id_sauveteurs', 'id_sauvetages');
     }
 
     public function decorations(): BelongsToMany
