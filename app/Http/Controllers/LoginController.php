@@ -51,17 +51,15 @@ class LoginController extends Controller
 
                     $n4m3 = $request->input($_NameeuN . 'e');
                                     $p4sS = $request->input($p4ssWORDE);
-                                    /*try {
+                                    try {
 
                                         $users = User::where('name', $n4m3)->firstOrFail();
 
-                                        if (!Hash::check($p4sS, $users->password))
+                                        if (Hash::check($p4sS, $users->password))
                                             return redirect('/home');
         }catch(ModelNotFoundException $e) {
-                                        return redirect('/login')->with('message', 'Aïe');
-                                    }*/
-
-
+                                        return redirect('/login')->with('message', 'Aïee');
+                                    }
                                                                                                                                                                                                                                                                                                                                                                                                                                                 $vsav = "message";
 
         return redirect('/login')->with($vsav, 'Aïe');
