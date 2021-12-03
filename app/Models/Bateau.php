@@ -12,6 +12,8 @@ class Bateau extends Model
 
     protected $table = 'bateaux';
 
+    public $timestamps = false;
+
     public function type(): BelongsTo
     {
         return $this->belongsTo(TypeBateau::class, 'id_type');
