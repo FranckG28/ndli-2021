@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AddRescuerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +38,6 @@ Route::get('/resquer/list', function () {
     return view('resquerList');
 });
 
-Route::get('/saved', function () {
-    return view('saved');
-});
-
 Route::get('/saved/list', function () {
     return view('savedList');
 });
@@ -61,9 +58,11 @@ Route::get('/community/resquer', function () {
     return view('community.resquer');
 });
 
-Route::get('/community/saved', function () {
-    return view('community.saved');
-});
+ Route::get('/community/saved', function () {
+     return view('community.saved');
+ });
+
+Route::post('/community/saved', [AddRescuerController::class, 'add_rescue'])->name('add_rescue');
 
 Route::get('/community/trips', function () {
     return view('community.trips');

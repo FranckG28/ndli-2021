@@ -3,7 +3,7 @@
 @section('content')
     <body>
         <h1>Community Sauvés</h1>
-        <form action="/community/saved" method="post">
+        <form action="{{ route('add_rescue') }}" method="post">
             @csrf
             <input type="text" name="name" id="name" placeholder="Nom" required>
             <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
@@ -16,6 +16,7 @@
             <textarea placeholder="Etat civil" id="etatcivil" name="etatcivil"></textarea>
             <textarea placeholder="Carrière" id="carriere" name="carriere"></textarea>
             <textarea placeholder="Généalogie" id="genealogie" name="genealogie"></textarea>
+            <button id="btnSubmit" type="submit">Valider !</button>
         </form>
     </body>
 @endsection

@@ -8,7 +8,7 @@ class AddRescuerController extends Controller
 {
     public function add_rescue(Request $request)
     {
-        $nom = $request->input('nom');
+        $nom = $request->input('name');
         $prenom = $request->input('prenom');
         $dateBirth = $request->input('dateBirth');
         $dateDeath = $request->input('dateDeath');
