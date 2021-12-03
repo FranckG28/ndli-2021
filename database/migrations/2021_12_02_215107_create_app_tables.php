@@ -73,24 +73,21 @@ class CreateAppTables extends Migration
         {
             $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
             $table->foreignId('id_sauves')->constrained('sauves');
-            $table->primary(['id_sauveteurs','sauveteurs']);
-            $table->primary(['id_sauves','sauves']);
+            $table->primary(['id_sauveteurs','id_sauves']);
         });
 
         Schema::create('sauveteurs_sauvetages', function(Blueprint $table)
         {
             $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
             $table->foreignId('id_sauvetages')->constrained('sauvetages');
-            $table->primary(['id_sauveteurs','sauveteurs']);
-            $table->primary(['id_sauvetages','sauvetages']);
+            $table->primary(['id_sauveteurs','id_sauvetages']);
         });
 
         Schema::create('sauveteurs_decorations', function(Blueprint $table)
         {
             $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
             $table->foreignId('id_decorations')->constrained('decorations');
-            $table->primary(['id_sauveteurs','sauveteurs']);
-            $table->primary(['id_decorations','decorations']);
+            $table->primary(['id_sauveteurs','id_decorations']);
         });
     }
 
