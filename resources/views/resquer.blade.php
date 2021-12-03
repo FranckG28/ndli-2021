@@ -3,38 +3,30 @@
 @section('content')
     <body>
       <div class="resquer">
-        <img class="ml-40 rounded-full w-56 shadow-2xl" src="https://histoire-image.org/sites/default/styles/galerie_principale/public/portrait-de_gaulle-1940.jpg?itok=jqhrqo-N" alt="sauveur image">
+        <img class="ml-40 rounded-full w-56 shadow-2xl" src="{{$sauveteurs->urlImg}}" alt="sauveur image">
         <div class="px-40 flex flex-col justify-center">
-          <h1>Nom du sauveteur</h1>
-          <p class="text-gray-400 my-2">21 décembre 1888 - 22 janviers 1974</p>
+          <h1>{{$sauveteurs->prenom}} {{$sauveteurs->nom}}</h1>
+          <p class="text-gray-400 my-2">{{$sauveteurs->date_naissaince}} / {{$sauveteurs->date_mort}}</p>
           <p>Commandant...</p>
           <p>Au moins 5678 personnes lui doivent la vie</p>
         </div>
       </div>
 
+
+
       <div class="resquerTopic">
         <h2>État civil</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br>
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+        <p>{{$sauveteurs->etat_civil}}</p>
       </div>
 
       <div class="resquerTopic">
         <h2>Données généalogiques</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi<br>
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit </p>
+        <p>{{$sauveteurs->genealogie}}</p>
       </div>
 
       <div class="resquerTopic">
         <h2>Carrière</h2>
-        <p>1900 -  elit</p>
-        <p>3567 -  brrr</p>
-        <p>3812 -  coucou</p>
-        <p>7489 -  envie de</p>
-        <p>318 -  chier</p>
+        {{$sauveteurs->carriere}}
       </div>
 
       <div class="resquerTopic">
