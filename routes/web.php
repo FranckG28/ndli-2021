@@ -31,9 +31,10 @@ Route::get('/boat/list', function () {
 })->name('boatList');
 
 
-Route::get('/resquer/', function () {
-    return view('resquer');
-})->name('resquer');
+Route::get('/resquer/list', function () {
+    return view('resquerList', ['sauveteurs' => App\Models\Sauveteur::get()]);
+})->name('resquerList');
+
 
 Route::get('/resquer/{id}', function ($id) {
     return view('resquer', ['sauveteurs' => App\Models\Sauveteur::find($id)]);
@@ -43,9 +44,10 @@ Route::get('/resquer/{id}', function ($id) {
 
 
 
-Route::get('/resquer/list', function () {
-    return view('resquerList');
-})->name('resquerList');
+Route::get('/saved', function () {
+    return view('saved');
+})->name('saved');
+
 
 Route::get('/saved/list', function () {
     return view('savedList');
