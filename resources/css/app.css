@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* FONTS */
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Medium.woff2') format('woff2'),
+        url('/fonts/Roobert-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Regular.woff2') format('woff2'),
+        url('/fonts/Roobert-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Light.woff2') format('woff2'),
+        url('/fonts/Roobert-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Heavy.woff2') format('woff2'),
+        url('/fonts/Roobert-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-Bold.woff2') format('woff2'),
+        url('/fonts/Roobert-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roobert';
+    src: url('/fonts/Roobert-SemiBold.woff2') format('woff2'),
+        url('/fonts/Roobert-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-MediumItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro Poster';
+    src: url('/fonts/Vesterbro-Poster.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Poster.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro Poster';
+    src: url('/fonts/Vesterbro-PosterItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-PosterItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Italic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-ExtraboldItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-ExtraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Light.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Bold.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Extrabold.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-LightItalic.woff2') format('woff2'),
+        url('/fonts/Vesterbro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Regular.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vesterbro';
+    src: url('/fonts/Vesterbro-Medium.woff2') format('woff2'),
+        url('/fonts/Vesterbro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+body {
+    @apply bg-gray-50
+}
+
+.navLinks li {
+    @apply text-yellow-500 font-medium text-lg py-2 border-2 border-0 hover:border-b-2	 hover:border-yellow-500 active:underline
+}
+
+.homeHead {
+    background-size: cover;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.25)), url('https://images.unsplash.com/photo-1590946445359-2139a60e3a8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    @apply rounded-2xl bg-center flex flex-col justify-center items-center py-20 gap-3
+}
+
+input[type=text] {
+    @apply outline-none
+}
+
+h2 {
+    @apply text-2xl text-yellow-500 
+}
+
+.resquer{
+  @apply flex p-12
+}
+
+.resquer h1{
+  @apply font-bold text-5xl text-blue-800
+}
+
+.resquerTopic{
+  @apply m-10 ml-52
+}
+
+.resquerTopic h2{
+  @apply font-semibold text-gray-800 text-2xl
+}
+
+.saveItem{
+  @apply shadow-xl w-80 mb-4 p-4 rounded-md
+}
