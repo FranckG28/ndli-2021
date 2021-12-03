@@ -643,11 +643,17 @@ video {
 .flex-row {
 	flex-direction: row;
 }
+.flex-col {
+	flex-direction: column;
+}
 .items-center {
 	align-items: center;
 }
 .justify-end {
 	justify-content: flex-end;
+}
+.justify-center {
+	justify-content: center;
 }
 .gap-5 {
 	gap: 1.25rem;
