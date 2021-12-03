@@ -9,7 +9,7 @@
 
             @foreach ($sauveteurs as $sauveteur)
 
-            
+
                 <a href="{{$sauveteur->id}}" class="rounded-lg bg-white p-4 shadow-md flex gap-3 hover:bg-gray-50 transition ease-in-out duration-200 active:bg-gray-100">
                     <img class="ml-40 rounded-full w-16 shadow-2xl" src="{{$sauveteur->urlImg}}" alt="sauveur image">
                     <div>
@@ -17,11 +17,16 @@
                         <p class="text-gray-400 my-1">{{$sauveteur->date_naissaince}} / {{$sauveteur->date_mort}}</p>
                     </div>
                 </a>
-            
+
             @endforeach
 
+            <a href="{{route('community.resquer')}}" class="rounded-lg bg-white p-4 shadow-md flex gap-3 hover:bg-gray-50 transition ease-in-out duration-200 active:bg-gray-100">
+                <div>
+                    <h2>Ajouter un nouveau sauveteur</h2>
+                </div>
+            </a>
     </div>
 
 </div>
-        
+
 @endsection
