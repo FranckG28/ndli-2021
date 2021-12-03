@@ -567,6 +567,81 @@ video {
   display: none;
 }
 
+*, ::before, ::after {
+	--tw-border-opacity: 1;
+	border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+.container {
+	width: 100%;
+}
+@media (min-width: 640px) {
+
+	.container {
+		max-width: 640px;
+	}
+}
+@media (min-width: 768px) {
+
+	.container {
+		max-width: 768px;
+	}
+}
+@media (min-width: 1024px) {
+
+	.container {
+		max-width: 1024px;
+	}
+}
+@media (min-width: 1280px) {
+
+	.container {
+		max-width: 1280px;
+	}
+}
+@media (min-width: 1536px) {
+
+	.container {
+		max-width: 1536px;
+	}
+}
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+.flex {
+	display: flex;
+}
+.w-40 {
+	width: 10rem;
+}
+.flex-grow {
+	flex-grow: 1;
+}
+.flex-row {
+	flex-direction: row;
+}
+.items-center {
+	align-items: center;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.gap-5 {
+	gap: 1.25rem;
+}
+.py-5 {
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+}
+.text-4xl {
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+}
+.text-white {
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 
 /* FONTS */
 @font-face {
@@ -738,6 +813,34 @@ body {
 	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
 
-h1 {
-	font-family: Vesterbro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+.navLinks li {
+	border-width: 2px;
+	border-width: 0px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	font-weight: 500;
+	--tw-text-opacity: 1;
+	color: rgba(245, 158, 11, var(--tw-text-opacity));
 }
+
+.navLinks li:hover {
+	border-bottom-width: 2px;
+	--tw-border-opacity: 1;
+	border-color: rgba(245, 158, 11, var(--tw-border-opacity));
+}
+
+.navLinks li:active {
+	text-decoration: underline;
+}
+
+.homeHead {
+    background-image: url('https://images.unsplash.com/photo-1590946445359-2139a60e3a8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-position: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem}
