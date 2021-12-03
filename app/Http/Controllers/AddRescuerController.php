@@ -10,7 +10,7 @@ class AddRescuerController extends Controller
     public function add_rescue(Request $request)
     {
         $rescue = new Sauveteur;
-        $rescue->id_grade = 1;
+        $rescue->id_grade = $request->input('gradeput');
         $rescue->nom = $request->input('name');
         $rescue->prenom = $request->input('prenom');
         $rescue->date_naissaince = $request->input('dateBirth');
@@ -19,10 +19,6 @@ class AddRescuerController extends Controller
         $rescue->carriere = $request->input('carriere');
         $rescue->etat_civil = $request->input('etatcivil');
         $rescue->save();
-
-        echo"<script language=\"javascript\">";
-        echo"alert('le nom : $dd($request->all())";
-        echo"</script>";
         return view('/community/saved');
     }
 }
