@@ -15,7 +15,7 @@ class CreateAppTables extends Migration
     {
         Schema::create('grades', function(Blueprint $table) {
             $table->id();
-            $table->string('Nom',50);            
+            $table->string('nom',50);           
         });
 
         Schema::create('decorations',function(Blueprint $table)
@@ -65,6 +65,11 @@ class CreateAppTables extends Migration
             $table->timestamps();
 
             $table->foreignId('id_grade')->constrained('grades');
+            $table->string('url_image',256);
+            $table->string('etat_civil');
+            $table->string('genealogie');
+            $table->string('carriere');
+
         });
 
         
@@ -116,5 +121,6 @@ class CreateAppTables extends Migration
         Schema::dropIfExists('type_bateaux');
         Schema::dropIfExists('decorations');  
         Schema::dropIfExists('utilisateur');
+        Schema::dropIfExists('sauveteurs_decorations');
     }
 }
