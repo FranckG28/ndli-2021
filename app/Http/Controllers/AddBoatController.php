@@ -15,6 +15,6 @@ class AddBoatController extends Controller
         $boat->description = $request->input('description');
         $boat->url_image = $request->input('urlimg');
         $boat->save();
-        return view('/community/boat');
+        return redirect()->route('community.boat');
     }
 }
