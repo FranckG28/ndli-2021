@@ -14,13 +14,13 @@
         </form>
     </div>
 
-    <div class="grid-cols-2 gap-5 py-5">
+    <div class="grid-cols-2 gap-5 py-10">
 
-        <div class="grid gap-3">
+        <div class="grid gap-3 text-center">
             <h2>Qui sommes nous ?</h2>
             <p> 
                 Bienvenue sur le site des sauveteurs du dunkerquois. Ce site rend hommage aux femmes, hommes et enfants qui ont réalisé des actes de sauvetages en milieu aquatique.
-    </p><p>
+                </p><p>
                 Ces sauveteurs, habitants du dunkerquois, ont participé à plus de 900 sauvetages en mer et plus de 1100 sauvetages individuels. Œuvrant avec courage, abnégation et souvent au mépris du risque ils méritent amplement que leurs actes soient pérennisés.</p>
         </div>
 
