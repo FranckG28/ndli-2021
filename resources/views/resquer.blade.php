@@ -7,7 +7,8 @@
         <div class="px-40 flex flex-col justify-center">
           <h1>{{$sauveteurs->prenom}} {{$sauveteurs->nom}}</h1>
           <p class="text-gray-400 my-2">{{$sauveteurs->date_naissaince}} / {{$sauveteurs->date_mort}}</p>
-          <p>Commandant...</p>
+          <p>{{$sauveteurs->grades->Nom}}</p>
+
           <p>Au moins 5678 personnes lui doivent la vie</p>
         </div>
       </div>
@@ -36,43 +37,18 @@
 
       <div class="resquerTopic">
         <h2>Sauvetages et sorties en mer</h2>
-        <div class="flex my-5">
-          <p class=" text-gray-800 text-xl">1900</p>
 
-          <div class="flex flex-col ml-4">
-            <div class="saveItem" >
-              <h3>Sauvetage de l'allège SPECULANT</h3>
-              <p>12 septembres - 4 homme sauvés</p>
-            </div>
-            <div class="saveItem">
-              <h3>Sauvetage de l'allège SPECULANT</h3>
-              <p>12 septembres - 4 homme sauvés</p>
-            </div>
-            <div class="saveItem">
-              <h3>Sauvetage de l'allège SPECULANT</h3>
-              <p>12 septembres - 4 homme sauvés</p>
-            </div>
+        @foreach ($sauveteurs->sauvetages as $sauvetage)
+        <a href="{{route('trips', $sauvetage->id)}}" class="rounded-lg bg-white my-8 p-4 shadow-md flex gap-3 hover:bg-gray-50 transition ease-in-out duration-200 active:bg-gray-100">
+          <div class=" ">
+            <h3>{{$sauvetage->nom}}</h3>
+            <p class="text-gray-400 my-2">{{$sauvetage->date}}</p>
+            <p>{{$sauvetage->nb_sauve}} hommes sauvés</p>
           </div>
-        </div>
+        </a>
 
-        <div class="flex my-5">
-          <p class=" text-gray-800 text-xl">1900</p>
+        @endforeach
 
-          <div class="flex flex-col ml-4">
-            <div class="saveItem" >
-              <h3>Sauvetage de l'allège SPECULANT</h3>
-              <p>12 septembres - 4 homme sauvés</p>
-            </div>
-            <div class="saveItem">
-              <h3>Sauvetage de l'allège SPECULANT</h3>
-              <p>12 septembres - 4 homme sauvés</p>
-            </div>
-            <div class="saveItem">
-              <h3>Sauvetage de l'allège SPECULANT</h3>
-              <p>12 septembres - 4 homme sauvés</p>
-            </div>
-          </div>
-        </div>
       </div>
 
 
