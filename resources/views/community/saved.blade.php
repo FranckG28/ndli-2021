@@ -3,16 +3,15 @@
 @section('content')
     <body>
         <h1>Community Sauvés</h1>
-        <form action="{{ route('add_rescue') }}" method="post">
+        <form action="{{ route('add_rescue') }}" method="POST">
             @csrf
             <input type="text" name="name" id="name" placeholder="Nom" required>
             <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input type="date" name="dateBirth" id="dateBirth" placeholder="Date de naissance" required>
             <input type="date" name="dateDeath" id="dateDeath" oninput="checkDOB()" placeholder="Date de décès (facultatif)">
             <select name="Grade" id="grade">
-                <option value="1">Lol</option>
                 @foreach(App\Models\Grade::all() as $grades)
-                    <option value="$grades->id">{{$grades->nom}}</option>
+                    <option value="{{ $grades->id }}">{{$grades->Nom}}</option>
                 @endforeach
             </select>
             <textarea placeholder="Etat civil" id="etatcivil" name="etatcivil"></textarea>

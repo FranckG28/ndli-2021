@@ -7,7 +7,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
 
-  @include('shared.nav-bar')
-  @yield('content')
-  @include('shared.footer')
+  <body>
+    @include('shared.nav-bar')
+    @yield('content')
+    @include('shared.footer')
+  </body>
+  
 </html>
