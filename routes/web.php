@@ -25,7 +25,7 @@ Route::get('/boat', function () {
     return view('boat');
 });
 
-Route::get('/boatList', function () {
+Route::get('/boat/list', function () {
     return view('boatList');
 });
 
@@ -33,7 +33,7 @@ Route::get('/resquer', function () {
     return view('resquer');
 });
 
-Route::get('/resquerList', function () {
+Route::get('/resquer/list', function () {
     return view('resquerList');
 });
 
@@ -41,7 +41,7 @@ Route::get('/saved', function () {
     return view('saved');
 });
 
-Route::get('/savedList', function () {
+Route::get('/saved/list', function () {
     return view('savedList');
 });
 
@@ -49,10 +49,22 @@ Route::get('/trips', function () {
     return view('trips');
 });
 
-Route::get('/tripsList', function () {
+Route::get('/trips/list', function () {
     return view('tripsList');
 });
 
-Route::get('addrescuer', function () {
-    return view('addrescuer'); // une partie communautaire permettant à toutes personnes ayant connaissance de sauvetages, de sauveteurs ou même de personnes sauvées
+Route::get('/community/boat', function () {
+    return view('community.boat');
+});
+
+Route::get('/community/resquer', function () {
+    return view('community.resquer');
+});
+
+Route::get('/community/saved', function () {
+    return view('community.saved');
+});
+
+Route::get('/community/trips', function () {
+    return view('community.trips');
 });

@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Rescuer</title>
-        <link rel="stylesheet" href="../../css/styles.css">
-        <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    </head>
-
+@extends('layouts.app')
+@section('title', 'Sauveteurs')
+@section('content')
     <body>
-        <form action="/addsaver" method="post">
+        <h1>Community Sauvés</h1>
+        <form action="/community/saved" method="post">
             @csrf
             <input type="text" name="name" id="name" placeholder="Nom" required>
             <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
@@ -24,6 +18,4 @@
             <textarea placeholder="Généalogie" id="genealogie" name="genealogie"></textarea>
         </form>
     </body>
-</html>
-
-
+@endsection
