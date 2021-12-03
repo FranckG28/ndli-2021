@@ -40,12 +40,6 @@ Route::get('/resquer/list', function () {
     return view('resquerList');
 })->name('resquerList');
 
-
-Route::get('/saved', function () {
-    return view('saved');
-})->name('saved');
-
-
 Route::get('/saved/list', function () {
     return view('savedList');
 })->name('savedList');
