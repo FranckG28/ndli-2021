@@ -9,12 +9,13 @@ class AddRescuerController extends Controller
 {
     public function add_rescue(Request $request)
     {
-        if(!$request->filled(['name', 'gradeput', 'prenom', 'dateBirth', 'dateDeath', 'genealogie', 'carriere', 'etatcivil']))
+        if(!$request->filled(['name', 'gradeput', 'prenom', 'dateBirth', 'dateDeath', 'genealogie', 'carriere', 'etatcivil', 'urlimage']))
         {
             return redirect()->route('community.resquer');
         } else {
             $rescue = new Sauveteur;
             $rescue->id_grade = $request->input('gradeput');
+            $rescue->urlImg = $request->input('urlimage');
             $rescue->nom = $request->input('name');
             $rescue->prenom = $request->input('prenom');
             $rescue->date_naissaince = $request->input('dateBirth');
@@ -25,6 +26,6 @@ class AddRescuerController extends Controller
             $rescue->save();
         }
         
-        return redirect()->route('community.resquer');
+        return redirect()->route('resquerList');
     }
 }

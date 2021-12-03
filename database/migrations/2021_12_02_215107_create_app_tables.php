@@ -69,6 +69,7 @@ class CreateAppTables extends Migration
             $table->string('etat_civil');
             $table->string('genealogie');
             $table->string('carriere');
+
         });
 
         
