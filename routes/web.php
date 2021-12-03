@@ -44,11 +44,11 @@ Route::get('/resquer/{id}', function ($id) {
 
 
 Route::get('/saved/list', function () {
-    return view('savedList');
+    return view('savedList', ['sauves' => App\Models\Sauve::get()]);
 })->name('savedList');
 
 Route::get('/saved/{id}', function ($id) {
-    return view('saved', ['sauvetages' => App\Models\Sauveteur::find($id)]);
+    return view('saved', ['sauve' => App\Models\Sauve::find($id)]);
 })->name('saved');
 
 
