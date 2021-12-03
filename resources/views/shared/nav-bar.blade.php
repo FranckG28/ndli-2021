@@ -6,7 +6,7 @@
       </a>
 
         <ul class="flex flex-grow items-center justify-end gap-5 navLinks">
-            <li><a href="{{route('resquer')}}">Sauveteur</a></li>
+            <li><a href="{{route('resquer', 1)}}">Sauveteur</a></li>
             <li><a href="{{route('trips')}}">Sorties en mer</a></li>
             <li><a href="{{route('saved')}}">Sauvés</a></li>
             <li><a href="{{route('boat')}}">Bateaux</a></li>
