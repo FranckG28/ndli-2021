@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddRescuerController;
+use App\Http\Controllers\AddBoatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,9 +78,13 @@ Route::get('/community/resquer', function () {
  });
 
 Route::post('add_rescue', [AddRescuerController::class, 'add_rescue'])->name('add_rescue');
+Route::post('add_boat', [AddBoatController::class, 'add_boat'])->name('add_boat');
 
 Route::post('/community/saved', function () {
     return view('/community/saved');
+});
+Route::post('/community/boat', function () {
+    return view('/community/boat');
 });
 
 Route::get('/community/trips', function () {
