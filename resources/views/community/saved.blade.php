@@ -1,7 +1,3 @@
-<?php
-use App\Models\Rescue;
-?>
-
 @extends('layouts.app')
 @section('title', 'Sauveteurs')
 @section('content')
@@ -14,12 +10,10 @@ use App\Models\Rescue;
             <input type="date" name="dateBirth" id="dateBirth" placeholder="Date de naissance" required>
             <input type="date" name="dateDeath" id="dateDeath" oninput="checkDOB()" placeholder="Date de décès (facultatif)">
             <select name="Grade" id="grade">
-            <?php
-                echo 'option value="1">pute</option>';
-                foreach (Rescue::all() as $rescue) {
-                    echo "option value='$rescue->id'>$rescue->Nom</option>";
-                }
-            ?>
+                <option value="1">Lol</option>
+                @foreach(App\Models\Grade::all() as $grades)
+                    <option value="$grades->id">{{$grades->nom}}</option>
+                @endforeach
             </select>
             <textarea placeholder="Etat civil" id="etatcivil" name="etatcivil"></textarea>
             <textarea placeholder="Carrière" id="carriere" name="carriere"></textarea>

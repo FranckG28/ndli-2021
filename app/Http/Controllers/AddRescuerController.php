@@ -26,9 +26,6 @@ class AddRescuerController extends Controller
 
     public function load_rescue(Request $request)
     {
-        $user = new MyUser($request->login);
-        
-
         return view('/community/saved');
     }
 }

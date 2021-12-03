@@ -9,6 +9,6 @@ class Rescue extends Model
 {
     use HasFactory;
 
-    protected $table = 'grades';
+
     
 }
