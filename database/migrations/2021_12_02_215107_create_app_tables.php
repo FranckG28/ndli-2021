@@ -22,8 +22,7 @@ class CreateAppTables extends Migration
         {
             $table->id();
             $table->date('date');
-            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
-            $table->string('url_image',256);
+            $table->string('url_image',256);  
         });
 
         Schema::create('type_bateaux',function(Blueprint $table)
@@ -65,21 +64,30 @@ class CreateAppTables extends Migration
             $table->date('date_mort');
             $table->timestamps();
 
-            $table->foreignId('id_grade')->constrained('grade');
+            $table->foreignId('id_grade')->constrained('grades');
         });
 
         
 
         Schema::create('sauveteurs_sauves', function(Blueprint $table)
         {
-            $table->foreignId('id_sauveteurs')->primary()->constrained('sauveteurs');
-            $table->foreignId('id_sauves')->primary()->constrained('sauves');
+            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
+            $table->foreignId('id_sauves')->constrained('sauves');
+            $table->primary(['id_sauveteurs','id_sauves']);
         });
 
         Schema::create('sauveteurs_sauvetages', function(Blueprint $table)
         {
-            $table->foreignId('id_sauveteurs')->primary()->constrained('sauveteurs');
-            $table->foreignId('id_sauvetages')->primary()->constrained('sauvetages');
+            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
+            $table->foreignId('id_sauvetages')->constrained('sauvetages');
+            $table->primary(['id_sauveteurs','id_sauvetages']);
+        });
+
+        Schema::create('sauveteurs_decorations', function(Blueprint $table)
+        {
+            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
+            $table->foreignId('id_decorations')->constrained('decorations');
+            $table->primary(['id_sauveteurs','id_decorations']);
         });
     }
 
@@ -98,6 +106,6 @@ class CreateAppTables extends Migration
         Schema::dropIfExists('sauveteurs_sauves');
         Schema::dropIfExists('sauveteurs_sauvetages');
         Schema::dropIfExists('type_bateaux');
-        Schema::dropIfExists('decorations');
+        Schema::dropIfExists('decorations');  
     }
 }
