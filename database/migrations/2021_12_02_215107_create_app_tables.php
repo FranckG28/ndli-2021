@@ -71,14 +71,26 @@ class CreateAppTables extends Migration
 
         Schema::create('sauveteurs_sauves', function(Blueprint $table)
         {
-            $table->foreignId('id_sauveteurs')->primary()->constrained('sauveteurs');
-            $table->foreignId('id_sauves')->primary()->constrained('sauves');
+            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
+            $table->foreignId('id_sauves')->constrained('sauves');
+            $table->primary(['id_sauveteurs','sauveteurs']);
+            $table->primary(['id_sauves','sauves']);
         });
 
         Schema::create('sauveteurs_sauvetages', function(Blueprint $table)
         {
-            $table->foreignId('id_sauveteurs')->primary()->constrained('sauveteurs');
-            $table->foreignId('id_sauvetages')->primary()->constrained('sauvetages');
+            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
+            $table->foreignId('id_sauvetages')->constrained('sauvetages');
+            $table->primary(['id_sauveteurs','sauveteurs']);
+            $table->primary(['id_sauvetages','sauvetages']);
+        });
+
+        Schema::create('sauveteurs_decorations', function(Blueprint $table)
+        {
+            $table->foreignId('id_sauveteurs')->constrained('sauveteurs');
+            $table->foreignId('id_decorations')->constrained('decorations');
+            $table->primary(['id_sauveteurs','sauveteurs']);
+            $table->primary(['id_decorations','decorations']);
         });
     }
 
