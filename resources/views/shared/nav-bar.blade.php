@@ -1,5 +1,5 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <nav>
-
     <div class="flex flex-row container mx-auto">
       <a href="{{route('home')}}">
         <img src="{{URL('/images/logo.png')}}"  class="w-40 py-5" />
