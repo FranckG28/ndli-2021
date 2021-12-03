@@ -17,6 +17,18 @@ class AddRescuerController extends Controller
         $carriere = $request->input('carriere');
         $genealogie = $request->input('genealogie');
 
+        echo"<script language=\"javascript\">";
+        echo"alert('le nom : $dateBirth')";
+        echo"</script>";
+
+        return view('/community/saved');
+    }
+
+    public function load_rescue(Request $request)
+    {
+        $user = new MyUser($request->login);
         
+
+        return view('/community/saved');
     }
 }

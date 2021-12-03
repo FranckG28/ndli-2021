@@ -1,3 +1,7 @@
+<?php
+use App\Models\Rescue;
+?>
+
 @extends('layouts.app')
 @section('title', 'Sauveteurs')
 @section('content')
@@ -8,10 +12,14 @@
             <input type="text" name="name" id="name" placeholder="Nom" required>
             <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input type="date" name="dateBirth" id="dateBirth" placeholder="Date de naissance" required>
-            <input type="date" name="dateDeath" id="dateDeath" placeholder="Date de décès (facultatif)">
+            <input type="date" name="dateDeath" id="dateDeath" oninput="checkDOB()" placeholder="Date de décès (facultatif)">
             <select name="Grade" id="grade">
-                <option value="grade1">Commandant</option>
-                <option value="garde2">Grade2</option>
+            <?php
+                echo 'option value="1">pute</option>';
+                foreach (Rescue::all() as $rescue) {
+                    echo "option value='$rescue->id'>$rescue->Nom</option>";
+                }
+            ?>
             </select>
             <textarea placeholder="Etat civil" id="etatcivil" name="etatcivil"></textarea>
             <textarea placeholder="Carrière" id="carriere" name="carriere"></textarea>
@@ -20,3 +28,15 @@
         </form>
     </body>
 @endsection
+
+<script type="text/javascript">
+    function checkDOB() {
+        var dateBirth = document.getElementById('dateBirth').value;
+        var dateDeath = document.getElementById('dateDeath').value;
+        if ( dateDeath > dateBirth ) { 
+            $('#dateDeath').after('<p>You cannot enter a date in the future!.</p>');
+            return false;
+        }
+        return true;
+    }
+</script>
