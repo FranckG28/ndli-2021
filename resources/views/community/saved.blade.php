@@ -9,7 +9,7 @@
             <input type="text" name="prenom" id="prenom" placeholder="Prenom" required>
             <input type="date" name="dateBirth" id="dateBirth" placeholder="Date de naissance" required>
             <input type="date" name="dateDeath" id="dateDeath" oninput="checkDOB()" placeholder="Date de décès (facultatif)">
-            <select name="Grade" id="grade">
+            <select name="gradeput" id="gradeput">
                 @foreach(App\Models\Grade::all() as $grades)
                     <option value="{{ $grades->id }}">{{$grades->Nom}}</option>
                 @endforeach
