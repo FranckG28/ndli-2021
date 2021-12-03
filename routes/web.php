@@ -21,14 +21,16 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
-Route::get('/boat', function () {
-    return view('boat');
-})->name('boat');
+
 
 
 Route::get('/boat/list', function () {
-    return view('boatList');
+    return view('boatList', ['bateaux' => App\Models\Bateau::get()]);
 })->name('boatList');
+
+Route::get('/boat/{id}', function ($id) {
+    return view('boat', ['bateau' => App\Models\Bateau::find($id)]);
+})->name('boat');
 
 
 Route::get('/resquer/list', function () {
@@ -38,30 +40,25 @@ Route::get('/resquer/list', function () {
 
 Route::get('/resquer/{id}', function ($id) {
     return view('resquer', ['sauveteurs' => App\Models\Sauveteur::find($id)]);
-});
-
-
-
-
-
-Route::get('/saved', function () {
-    return view('saved');
-})->name('saved');
+})->name('resquer');
 
 
 Route::get('/saved/list', function () {
     return view('savedList');
 })->name('savedList');
 
-
-Route::get('/trips', function () {
-    return view('trips');
-})->name('trips');
+Route::get('/saved/{id}', function ($id) {
+    return view('saved', ['sauvetages' => App\Models\Sauveteur::find($id)]);
+})->name('saved');
 
 
 Route::get('/trips/list', function () {
-    return view('tripsList');
+    return view('tripsList', ['trips' => App\Models\Sauvetage::get()]);
 })->name('tripsList');
+
+Route::get('/trips/{id}', function ($id) {
+    return view('trips', ['trips' => App\Models\Sauvetage::find($id)]);
+})->name('trips');
 
 
 Route::get('/community/boat', function () {
